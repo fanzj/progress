@@ -11,6 +11,7 @@
     <modules>
         <module>progress-juc</module>
         <module>progress-common</module>
+        <module>progess-design-mode</module>
     </modules>
 
     <properties>
