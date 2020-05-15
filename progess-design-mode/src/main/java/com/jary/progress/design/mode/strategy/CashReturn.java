@@ -9,9 +9,9 @@ package com.jary.progress.design.mode.strategy;
 public class CashReturn extends CashSuper{
 
     //满足条件金额
-    private double moneyCondition = 0d;
+    private double moneyCondition;
     //反利金额
-    private double moneyReturn = 0d;
+    private double moneyReturn ;
 
     public CashReturn(double moneyCondition, double moneyReturn) {
         this.moneyCondition = moneyCondition;

@@ -42,4 +42,13 @@ public class StrategyTest {
         System.out.println(context.getResult(100*5));
     }
 
+    /**
+     * 策略模式结合反射
+     */
+    @Test
+    public void testStrategyReflect() {
+        CashContextV3 context = new CashContextV3("打8折", new Class[]{double.class}, new Object[]{0.8});
+        System.out.println(context.getResult(500));
+    }
+
 }
