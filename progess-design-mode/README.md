@@ -22,3 +22,4 @@
 反射+策略模式可以代替项目中大量的switch case判断
 
 3、装饰模式
+`com.jary.progress.design.mode.decorator`
