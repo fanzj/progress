@@ -12,6 +12,12 @@ import java.util.concurrent.atomic.AtomicInteger;
  */
 public class CompletionServiceDemo1 {
 
+    /**
+     * 1、使用FutureTask轮循获取任务，如果第一个任务未完成第二个任务已完成，循环会阻塞在第一个任务的get方法处。
+     * 2、使用CompletionService实现任务优先完成优先拿到结果，结果按照任务完成顺序返回。内部使用BlockingQueue无界队列管理Future，有执行完毕的任务就把结果放入队列。
+     * 3、take()获取并移除表示下一个已完成任务的Future，如果目前不存在，则等待；poll()如果目前不存在，则返回null。
+     * @param args
+     */
     public static void main(String[] args) {
         ExecutorService executorService = new ThreadPoolExecutor(5, 5, 0, TimeUnit.MILLISECONDS, new LinkedBlockingQueue<>());
         CompletionService<String> completionService = new ExecutorCompletionService<>(executorService);
