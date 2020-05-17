@@ -22,6 +22,10 @@ public class AsyncExecutor {
 
     /**
      * 拒绝策略：如果添加到线程池失败，主线程会自己去执行该任务
+     * 1、AbortPolicy 丢弃任务并抛出RejectedExecutionException异常
+     * 2、CallerRunsPolicy 由调用线程处理该任务
+     * 3、DiscardOldestPolicy 丢弃队列最前面的任务，然后重新提交被拒绝的任务。
+     * 4、DiscardPolicy 丢弃任务，但是不抛出异常。如果线程队列已满，则后续提交的任务都会被丢弃，且是静默丢弃。
      */
     private static RejectedExecutionHandler REJECT = new ThreadPoolExecutor.CallerRunsPolicy();
 
@@ -32,7 +36,7 @@ public class AsyncExecutor {
 
     private static ThreadFactory THREAD_FACTORY = new ThreadFactoryBuilder()
             .setNameFormat("progress-executor-%s")
-            .setUncaughtExceptionHandler((t,e) -> log.error("progress线程池未知异常, threadName:{}", t.getName(), e))
+            .setUncaughtExceptionHandler((t, e) -> log.error("progress线程池未知异常, threadName:{}", t.getName(), e))
             .build();
 
     /**
@@ -40,10 +44,10 @@ public class AsyncExecutor {
      * 此线程池被用于pay-service所有场景，假设异步的场景最高并发量为400，则峰值的时候最少需要4线程
      * cpu资源足够的情况，维持cpu核心数的核心线程数，cpu+max并发量的最大线程数
      */
-    private static ExecutorService EXECUTOR_SERVICE = new ThreadPoolExecutor(CORE_SIZE, CORE_SIZE + 4, 30, TimeUnit.SECONDS, QUEUE, null
+    private static ExecutorService EXECUTOR_SERVICE = new ThreadPoolExecutor(CORE_SIZE, CORE_SIZE + 4, 30, TimeUnit.SECONDS, QUEUE, THREAD_FACTORY
             , REJECT);
 
-    public static ExecutorService getExecutorService(){
+    public static ExecutorService getExecutorService() {
         return EXECUTOR_SERVICE;
     }
 }
