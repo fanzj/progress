@@ -23,3 +23,11 @@
 
 3、装饰模式
 `com.jary.progress.design.mode.decorator`
+
+4、代理模式
+
+5、工厂方法模式
+
+6、原型模式
+
+
