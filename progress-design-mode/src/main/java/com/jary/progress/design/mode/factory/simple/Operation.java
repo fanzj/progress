@@ -11,5 +11,5 @@ public abstract class Operation {
 
     private double numberB;
 
-    protected abstract double getResult(double numberA, double numberB);
+    public abstract double getResult(double numberA, double numberB);
 }

@@ -7,7 +7,7 @@ package com.jary.progress.design.mode.factory.simple;
 public class OperationSub extends Operation {
 
     @Override
-    protected double getResult(double numberA, double numberB) {
+    public double getResult(double numberA, double numberB) {
         return numberA - numberB;
     }
 }
