@@ -29,6 +29,7 @@ public class BeanPostProcessorServiceTest {
     public void testBeanPostProcessor(){
         ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("spring-beans.xml");
         context.start();
+        context.close();
     }
 
 }

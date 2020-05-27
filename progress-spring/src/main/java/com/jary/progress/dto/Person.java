@@ -2,6 +2,8 @@ package com.jary.progress.dto;
 
 import lombok.Data;
 import lombok.ToString;
+import org.springframework.beans.factory.DisposableBean;
+import org.springframework.beans.factory.InitializingBean;
 
 /**
  * @author fanzhengjie
@@ -9,7 +11,7 @@ import lombok.ToString;
  */
 @Data
 @ToString
-public class Person {
+public class Person implements InitializingBean, DisposableBean {
 
     private String name;
 
@@ -17,4 +19,21 @@ public class Person {
         System.out.println(name + " say: "+word);
     }
 
+    @Override
+    public void afterPropertiesSet() throws Exception {
+        System.out.println("person InitializingBean#afterPropertiesSet");
+    }
+
+    @Override
+    public void destroy() throws Exception {
+        System.out.println("person DisposableBean#destroy");
+    }
+
+    public void startInit() {
+        System.out.println("xml config init-method=startInit");
+    }
+
+    public void endDestroy(){
+        System.out.println("xml config destroy-method=endDestroy");
+    }
 }
