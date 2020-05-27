@@ -11,4 +11,9 @@
 
     </bean>
 
+    <!--beanPostProcessor配置, 扫描当前配置的所有bean-->
+    <bean id="beanPostProcessorService" class="com.jary.progress.service.BeanPostProcessorService">
+
+    </bean>
+
 </beans>
