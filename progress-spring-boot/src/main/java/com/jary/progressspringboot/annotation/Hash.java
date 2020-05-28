@@ -1,4 +1,4 @@
-package com.jary.progress.annotation;
+package com.jary.progressspringboot.annotation;
 
 import java.lang.annotation.*;
 

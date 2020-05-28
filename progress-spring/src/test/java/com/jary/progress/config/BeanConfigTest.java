@@ -37,7 +37,7 @@ public class BeanConfigTest {
      */
     @Test
     public void testPerson2() {
-        ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("spring-beans.xml");
+        ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("classpath*:spring-beans.xml");
         context.start();
 
         Person person = (Person) context.getBean("person2");

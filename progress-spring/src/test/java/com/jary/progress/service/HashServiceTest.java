@@ -12,7 +12,7 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
  * @date 2020/5/26 3:44 下午
  */
 @RunWith(SpringJUnit4ClassRunner.class)
-@ContextConfiguration(locations = { "classpath*:spring-beans.xml" })
+@ContextConfiguration(locations = { "classpath*:spring-common-beans.xml" })
 public class HashServiceTest {
 
     @Autowired

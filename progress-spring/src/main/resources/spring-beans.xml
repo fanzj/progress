@@ -7,17 +7,14 @@
         <property name="name" value="Tom"/>
     </bean>
 
-    <bean id="hashService" class="com.jary.progress.service.HashService">
-
-    </bean>
-
     <!--beanPostProcessor配置, spring容器启动，扫描当前配置的所有bean-->
     <bean id="beanPostProcessorService" class="com.jary.progress.service.BeanPostProcessorService">
 
     </bean>
 
-    <bean id="instantiationAwareBeanPostProcessorService" class="com.jary.progress.service.InstantiationAwareBeanPostProcessorService">
+    <!-- 这个配置了会有问题-->
+   <!-- <bean id="instantiationAwareBeanPostProcessorService" class="com.jary.progress.service.InstantiationAwareBeanPostProcessorService">
 
-    </bean>
+    </bean>-->
 
 </beans>

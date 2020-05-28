@@ -1,7 +1,7 @@
-package com.jary.progress.aop;
+package com.jary.progressspringboot.aop;
 
 
-import com.jary.progress.annotation.Hash;
+import com.jary.progressspringboot.annotation.Hash;
 import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.annotation.Around;
 import org.aspectj.lang.annotation.Aspect;
@@ -21,7 +21,7 @@ import java.lang.reflect.Method;
 @Order(1)
 public class HashAop {
 
-    @Pointcut("@annotation(com.jary.progress.annotation.DomainFieldHash)")
+    @Pointcut("@annotation(com.jary.progressspringboot.annotation.DomainFieldHash)")
     public void pointCut(){
 
     }
