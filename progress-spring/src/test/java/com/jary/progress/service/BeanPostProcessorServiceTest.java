@@ -1,4 +1,4 @@
-package com.jary.progress.service.impl.lifecycle;
+package com.jary.progress.service;
 
 import com.jary.progress.config.BeanConfig;
 import org.junit.Before;
@@ -20,6 +20,9 @@ public class BeanPostProcessorServiceTest {
         ctx = new AnnotationConfigApplicationContext();
         ctx.register(BeanConfig.class);
         ctx.refresh();
+        ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("spring-beans.xml");
+        context.start();
+        context.close();
     }
 
     /**
@@ -27,9 +30,7 @@ public class BeanPostProcessorServiceTest {
      */
     @Test
     public void testBeanPostProcessor(){
-        ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("spring-beans.xml");
-        context.start();
-        context.close();
+
     }
 
 }

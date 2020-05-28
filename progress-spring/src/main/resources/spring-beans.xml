@@ -16,4 +16,8 @@
 
     </bean>
 
+    <bean id="instantiationAwareBeanPostProcessorService" class="com.jary.progress.service.InstantiationAwareBeanPostProcessorService">
+
+    </bean>
+
 </beans>
