@@ -1,4 +1,4 @@
-package com.jary.progress.sensitice;
+package com.jary.progress.common.sensitice;
 
 import com.jary.progress.common.bean.UserDO;
 import com.jary.progress.common.util.SensitiveUtils;
