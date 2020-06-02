@@ -3,12 +3,16 @@ package com.jary.progressspringboot.controller;
 import com.alibaba.fastjson.JSON;
 import com.jary.progressspringboot.domain.Student;
 import com.jary.progressspringboot.service.HashService;
+import com.jary.progressspringboot.service.TestService;
 import com.jary.progressspringboot.utils.ApplicationContextUtils;
 import org.springframework.context.ApplicationContext;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 import javax.annotation.Resource;
+import javax.servlet.http.HttpServletRequest;
 
 /**
  * @author fanzhengjie
@@ -20,6 +24,9 @@ public class TestController {
 
     @Resource
     private HashService hashService;
+
+    @Resource
+    private TestService testService;
 
     @Resource
     private ApplicationContext context;
@@ -56,5 +63,14 @@ public class TestController {
         Student s = (Student) context.getBean("student");
         System.out.println(s);
         return  hashService.hashTest(s);
+    }
+
+    /**
+     * 测试notBlank注解
+     * @return
+     */
+    @RequestMapping(value = "notBlank", method = RequestMethod.POST)
+    public String testNotBlankAnnoation(HttpServletRequest request, @RequestBody Student student) {
+        return testService.testNotNull(student);
     }
 }
