@@ -10,6 +10,8 @@ import java.lang.reflect.Method;
 /**
  * @author fanzhengjie
  * @date 2020/5/29 9:00 下午
+ * 在访问private或protected成员变量和方法时,必须通过setAccessible(boolean access)方法取消语言检查,
+ * 否则将抛出IllegalAccessException
  */
 public class ReflectTest {
 
@@ -92,6 +94,7 @@ public class ReflectTest {
 
         //获取私有变量
         Field field2 = clazz.getDeclaredField("idCard");
+        //取消java语言访问检查以访问private变量
         field2.setAccessible(true);
         field2.set(obj, "123456");
         System.out.println(obj);
