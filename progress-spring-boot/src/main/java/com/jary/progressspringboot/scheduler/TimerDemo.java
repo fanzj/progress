@@ -1,4 +1,4 @@
-package com.jary.progressspringboot.scheduler.timer;
+package com.jary.progressspringboot.scheduler;
 
 import java.util.Date;
 import java.util.Timer;
