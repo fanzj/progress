@@ -2,6 +2,7 @@ package com.jary.progress.leetcodecn.linkedlist;
 
 /**
  * https://leetcode-cn.com/problems/delete-middle-node-lcci/
+ * 同【Q237_删除链表中的节点】
  */
 public class 面试题_删除中间节点 {
 
