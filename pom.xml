@@ -13,6 +13,7 @@
         <module>progress-common</module>
         <module>progress-design-mode</module>
         <module>progress-spring</module>
+        <module>progress-leetcodecn</module>
     </modules>
 
     <properties>
