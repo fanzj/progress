@@ -6,7 +6,7 @@ import java.util.List;
 
 /**
  * https://leetcode-cn.com/problems/cong-wei-dao-tou-da-yin-lian-biao-lcof/
- * 方法一：翻转链表，然后顺序遍历
+ * 方法一：反转链表，然后顺序遍历
  * 方法二：顺序遍历，塞到list
  * 方法三：递归
  */
