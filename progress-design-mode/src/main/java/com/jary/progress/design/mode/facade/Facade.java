@@ -18,14 +18,14 @@ public class Facade {
         four = new SubSystemFour();
     }
 
-    public void methodA(){
+    public void methodA() {
         System.out.println("方法组A");
         one.methodOne();
         two.methodTwo();
         four.methodFour();
     }
 
-    public void methodB(){
+    public void methodB() {
         System.out.println("方法组B");
         two.methodTwo();
         three.methodThree();

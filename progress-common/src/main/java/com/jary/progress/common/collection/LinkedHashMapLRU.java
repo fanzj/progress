@@ -8,7 +8,7 @@ import java.util.Map;
  * @create 2020/2/19 下午10:42
  * @description
  */
-public class LinkedHashMapLRU<K,V> extends LinkedHashMap<K,V> implements Map<K,V> {
+public class LinkedHashMapLRU<K, V> extends LinkedHashMap<K, V> implements Map<K, V> {
 
     public LinkedHashMapLRU(int initialCapacity, float loadFactor, boolean accessOrder) {
         super(initialCapacity, loadFactor, accessOrder);
@@ -16,12 +16,13 @@ public class LinkedHashMapLRU<K,V> extends LinkedHashMap<K,V> implements Map<K,V
 
     /**
      * 重写LinkedHashMap中的removeEldestEntry方法，当LRU中元素多余6个时，删除最不经常使用的元素
+     *
      * @param eldest
      * @return
      */
     @Override
     protected boolean removeEldestEntry(Entry<K, V> eldest) {
-        if(size()>6){
+        if (size() > 6) {
             return true;
         }
         return false;
@@ -29,7 +30,7 @@ public class LinkedHashMapLRU<K,V> extends LinkedHashMap<K,V> implements Map<K,V
 
     public static void main(String[] args) {
         LinkedHashMapLRU<Character, Integer> lru = new LinkedHashMapLRU<Character, Integer>(
-            16, 0.75f, true);
+                16, 0.75f, true);
 
         //gijklh
         String s = "abcdefghijkl";

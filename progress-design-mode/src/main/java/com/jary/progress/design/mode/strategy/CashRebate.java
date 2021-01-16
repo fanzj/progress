@@ -11,7 +11,7 @@ public class CashRebate extends CashSuper {
 
     public CashRebate(double moneyRebate) {
         //折扣, 如0.8
-        this.moneyRebate =  moneyRebate;
+        this.moneyRebate = moneyRebate;
     }
 
     @Override

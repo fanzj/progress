@@ -13,7 +13,7 @@ public class ConcreteDecoratorB extends Decorator {
         System.out.println("具体装饰对象B的操作");
     }
 
-    private void addedBehavior(){
+    private void addedBehavior() {
 
     }
 }

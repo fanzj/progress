@@ -13,8 +13,8 @@
     </bean>
 
     <!-- 这个配置了会有问题-->
-   <!-- <bean id="instantiationAwareBeanPostProcessorService" class="com.jary.progress.service.InstantiationAwareBeanPostProcessorService">
+    <!-- <bean id="instantiationAwareBeanPostProcessorService" class="com.jary.progress.service.InstantiationAwareBeanPostProcessorService">
 
-    </bean>-->
+     </bean>-->
 
 </beans>

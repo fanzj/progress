@@ -10,17 +10,17 @@ import org.junit.Test;
 public class FactoryMethodTest {
 
     @Test
-    public void testAdd(){
+    public void testAdd() {
         IFactory factory = new AddFactory();
         Operation operation = factory.createOperation();
-        System.out.println(operation.getResult(1,2));
+        System.out.println(operation.getResult(1, 2));
     }
 
     @Test
     public void testSub() {
         IFactory factory = new SubFactory();
         Operation operation = factory.createOperation();
-        System.out.println(operation.getResult(5,7));
+        System.out.println(operation.getResult(5, 7));
     }
 
 }

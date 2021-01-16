@@ -22,18 +22,18 @@ import java.lang.reflect.Method;
 public class HashAop {
 
     @Pointcut("@annotation(com.jary.progressspringboot.annotation.DomainFieldHash)")
-    public void pointCut(){
+    public void pointCut() {
 
     }
 
     @Around("pointCut()")
     public void hash(ProceedingJoinPoint proceedingJoinPoint) throws Throwable {
         Object[] args = proceedingJoinPoint.getArgs();
-        if(args != null && args.length == 1 && args[0] != null) {
+        if (args != null && args.length == 1 && args[0] != null) {
             Class<?> clazz = args[0].getClass();
 
-            for(Field field : clazz.getDeclaredFields()) {
-                if(field.getAnnotation(Hash.class) != null && field.getType().equals(String.class)) {
+            for (Field field : clazz.getDeclaredFields()) {
+                if (field.getAnnotation(Hash.class) != null && field.getType().equals(String.class)) {
 
                     String hashName = genHashMethodName(field.getName(), "set");
                     Method declaredMethod = clazz.getDeclaredMethod(hashName, String.class);

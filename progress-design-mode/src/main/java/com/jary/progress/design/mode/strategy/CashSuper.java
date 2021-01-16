@@ -10,6 +10,7 @@ public abstract class CashSuper {
 
     /**
      * 收取现金
+     *
      * @param money 原价
      * @return 当前价
      */

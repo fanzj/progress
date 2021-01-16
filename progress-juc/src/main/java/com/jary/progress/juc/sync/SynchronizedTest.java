@@ -8,17 +8,17 @@ import com.jary.progress.juc.executor.AsyncExecutor;
  */
 public class SynchronizedTest {
 
-    private synchronized void service1(){
+    private synchronized void service1() {
         System.out.println("service1");
         service2();
     }
 
-    private synchronized void service2(){
+    private synchronized void service2() {
         System.out.println("service2");
         service3();
     }
 
-    private synchronized void service3(){
+    private synchronized void service3() {
         System.out.println("service3");
     }
 

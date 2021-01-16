@@ -10,7 +10,7 @@ import lombok.ToString;
  */
 @Data
 @ToString
-public class Person implements Cloneable{
+public class Person implements Cloneable {
 
     private String name;
     private Integer age;

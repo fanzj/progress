@@ -37,6 +37,7 @@ public class ReflectTest {
 
     /**
      * 获取构造
+     *
      * @throws NoSuchMethodException
      * @throws IllegalAccessException
      * @throws InvocationTargetException
@@ -47,7 +48,7 @@ public class ReflectTest {
         Class clazz = Person.class;
         //1、获取Person2类所有公共构造
         Constructor[] constructors = clazz.getConstructors();
-        for(Constructor con : constructors) {
+        for (Constructor con : constructors) {
             System.out.println(con);
         }
 
@@ -58,7 +59,7 @@ public class ReflectTest {
 
         //2.2、有参数
         Constructor con2 = clazz.getConstructor(int.class, int.class, String.class);
-        Object oo2  = con2.newInstance(1, 2, "haha");
+        Object oo2 = con2.newInstance(1, 2, "haha");
 
         //3、获取私有构造方法
         Constructor con3 = clazz.getDeclaredConstructor(int.class);
@@ -82,7 +83,7 @@ public class ReflectTest {
 
         //获取Person类的所有【公共】成员变量
         Field[] fields = clazz.getFields();
-        for(Field f : fields) {
+        for (Field f : fields) {
             System.out.println(f);
         }
 
@@ -106,7 +107,7 @@ public class ReflectTest {
         Object obj = clazz.newInstance();
         //获取Person类所有【公共】成员方法
         Method[] methods = clazz.getMethods();
-        for(Method m : methods) {
+        for (Method m : methods) {
             System.out.println(m);
         }
 

@@ -12,7 +12,7 @@ import org.springframework.context.annotation.Configuration;
 public class CommonBeanConfig {
 
     @Bean
-    public Student student(){
+    public Student student() {
         Student s = new Student();
         s.setId(1L);
         s.setName("周三天");

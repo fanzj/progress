@@ -6,7 +6,7 @@ package com.jary.progress.design.mode.facade;
  */
 public class SubSystemFour {
 
-    public void methodFour(){
+    public void methodFour() {
         System.out.println("子系统方法四");
     }
 }

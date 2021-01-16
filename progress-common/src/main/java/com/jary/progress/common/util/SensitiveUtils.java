@@ -21,10 +21,10 @@ public class SensitiveUtils {
         for (Class tmp = bean.getClass(); tmp != null; tmp = tmp.getSuperclass()) {
             Field[] fields = tmp.getDeclaredFields();
 
-            for(int i=0;i<fields.length;i++){
+            for (int i = 0; i < fields.length; i++) {
                 Field field = fields[i];
                 Desensitize desensitize = field.getAnnotation(Desensitize.class);
-                if(null != desensitize){
+                if (null != desensitize) {
                     field.setAccessible(true);
                     Object obj = field.get(bean);
                     Way way = desensitize.way().newInstance();

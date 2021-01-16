@@ -7,7 +7,7 @@ package com.jary.progress.design.mode.proxy;
 public class Proxy extends Subject {
     private Subject subject;
 
-    public Proxy(Subject subject){
+    public Proxy(Subject subject) {
         this.subject = subject;
     }
 

@@ -15,8 +15,8 @@ public class Person implements InitializingBean, DisposableBean {
 
     private String name;
 
-    public void sayWord(String word){
-        System.out.println(name + " say: "+word);
+    public void sayWord(String word) {
+        System.out.println(name + " say: " + word);
     }
 
     @Override
@@ -33,7 +33,7 @@ public class Person implements InitializingBean, DisposableBean {
         System.out.println("xml config init-method=startInit");
     }
 
-    public void endDestroy(){
+    public void endDestroy() {
         System.out.println("xml config destroy-method=endDestroy");
     }
 }

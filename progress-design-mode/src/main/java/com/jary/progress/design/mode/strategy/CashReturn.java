@@ -6,12 +6,12 @@ package com.jary.progress.design.mode.strategy;
  * 返利收费类
  * 如满300减100
  */
-public class CashReturn extends CashSuper{
+public class CashReturn extends CashSuper {
 
     //满足条件金额
     private double moneyCondition;
     //反利金额
-    private double moneyReturn ;
+    private double moneyReturn;
 
     public CashReturn(double moneyCondition, double moneyReturn) {
         this.moneyCondition = moneyCondition;

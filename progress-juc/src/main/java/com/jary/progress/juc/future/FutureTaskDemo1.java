@@ -8,7 +8,7 @@ import java.util.concurrent.FutureTask;
  */
 public class FutureTaskDemo1 {
 
-    public static void main(String[] args) throws Exception{
+    public static void main(String[] args) throws Exception {
         System.out.println("主线程开始。。。");
         FutureTask<String> futureTask = new FutureTask<>(() -> {
             System.out.println("子线程开始。。。");

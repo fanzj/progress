@@ -45,7 +45,7 @@ public class CompletableFutureDemo1 {
         CompletableFuture[] completableFutures = new CompletableFuture[]{completableFuture1, completableFuture2};
         CompletableFuture allResult = CompletableFuture.allOf(completableFutures);
         allResult.join();//allOf全部任务结束; anyOf最快的一个
-        for(Map.Entry<String, String> entry : returnMap.entrySet()) {
+        for (Map.Entry<String, String> entry : returnMap.entrySet()) {
             System.out.println("args = [" + entry + "]");
         }
         executorService.shutdown();

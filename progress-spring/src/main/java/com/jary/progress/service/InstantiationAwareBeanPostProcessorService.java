@@ -13,13 +13,13 @@ import java.beans.PropertyDescriptor;
 public class InstantiationAwareBeanPostProcessorService implements InstantiationAwareBeanPostProcessor {
     @Override
     public Object postProcessBeforeInstantiation(Class<?> aClass, String s) throws BeansException {
-        System.out.println("postProcessBeforeInstantiation...;"+aClass+";" +s);
+        System.out.println("postProcessBeforeInstantiation...;" + aClass + ";" + s);
         return null;
     }
 
     @Override
     public boolean postProcessAfterInstantiation(Object o, String s) throws BeansException {
-        System.out.println("postProcessAfterInstantiation...;"+o+";" +s);
+        System.out.println("postProcessAfterInstantiation...;" + o + ";" + s);
         return false;
     }
 
