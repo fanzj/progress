@@ -9,7 +9,7 @@ import org.junit.Test;
 public class DecoratorTest {
 
     @Test
-    public void testDecorator(){
+    public void testDecorator() {
         ConcreteComponent component = new ConcreteComponent();
         ConcreteDecoratorA decoratorA = new ConcreteDecoratorA();
         ConcreteDecoratorB decoratorB = new ConcreteDecoratorB();

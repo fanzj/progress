@@ -12,9 +12,9 @@ import java.util.concurrent.TimeUnit;
 public class ThreadPoolExecutorTest {
 
     public static void main(String[] args) {
-        ThreadPoolExecutor executor = new ThreadPoolExecutor(5,10,200, TimeUnit.MILLISECONDS, new ArrayBlockingQueue<>(5));
+        ThreadPoolExecutor executor = new ThreadPoolExecutor(5, 10, 200, TimeUnit.MILLISECONDS, new ArrayBlockingQueue<>(5));
 
-        for(int i = 0;i<20;i++){
+        for (int i = 0; i < 20; i++) {
             final int j = i;
             executor.execute(() -> {
                 System.out.println("正在执行task" + j);
@@ -26,7 +26,7 @@ public class ThreadPoolExecutorTest {
                 System.out.println("task " + j + "执行完毕");
             });
 
-            System.out.println("线程池中线程数目: "+ executor.getPoolSize()+", 队列中等待执行的任务数目: " + executor.getQueue().size() + ", 已执行完别的任务数目: " + executor.getCompletedTaskCount());
+            System.out.println("线程池中线程数目: " + executor.getPoolSize() + ", 队列中等待执行的任务数目: " + executor.getQueue().size() + ", 已执行完别的任务数目: " + executor.getCompletedTaskCount());
         }
 
         executor.shutdown();

@@ -36,37 +36,41 @@ public class TestController {
 
     /**
      * 测试ApplicationContext获取bean
+     *
      * @return
      */
     @RequestMapping("applicationContext")
-    public String testApplicationContext(){
+    public String testApplicationContext() {
         Student s = (Student) context.getBean("student");
         return JSON.toJSONString(s);
     }
 
     /**
      * 测试ApplicationContext获取bean
+     *
      * @return
      */
     @RequestMapping("applicationContextUtils")
-    public String testApplicationContextUtils(){
+    public String testApplicationContextUtils() {
         Student s = (Student) applicationContextUtils.getApplicationContext().getBean("student");
         return JSON.toJSONString(s);
     }
 
     /**
      * 测试aop拦截注解对字段进行hash
+     *
      * @return
      */
     @RequestMapping("hash")
     public String testHashService() {
         Student s = (Student) context.getBean("student");
         System.out.println(s);
-        return  hashService.hashTest(s);
+        return hashService.hashTest(s);
     }
 
     /**
      * 测试notBlank注解
+     *
      * @return
      */
     @RequestMapping(value = "notBlank", method = RequestMethod.POST)

@@ -14,7 +14,7 @@ public class WeekEnumTest {
      * 比较同类型枚举
      */
     @Test
-    public void testCompareEnum(){
+    public void testCompareEnum() {
         //
         Assert.assertEquals(WeekEnum.Saturday, WeekEnum.Saturday);
         Assert.assertNotEquals(WeekEnum.Saturday, WeekEnum.Thursday);

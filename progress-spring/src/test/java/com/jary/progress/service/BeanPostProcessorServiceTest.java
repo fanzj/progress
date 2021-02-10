@@ -9,14 +9,13 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 /**
  * @author fanzhengjie
  * @date 2020/5/26 8:50 下午
- *
  */
 public class BeanPostProcessorServiceTest {
 
     private AnnotationConfigApplicationContext ctx;
 
     @Before
-    public void setUp(){
+    public void setUp() {
         ctx = new AnnotationConfigApplicationContext();
         ctx.register(BeanConfig.class);
         ctx.refresh();
@@ -29,7 +28,7 @@ public class BeanPostProcessorServiceTest {
      * 基于注解
      */
     @Test
-    public void testBeanPostProcessor(){
+    public void testBeanPostProcessor() {
 
     }
 

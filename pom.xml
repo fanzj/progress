@@ -15,6 +15,7 @@
         <module>progress-spring</module>
         <module>progress-algorithm</module>
         <module>progress-io</module>
+        <module>progress-leetcodecn</module>
     </modules>
 
     <properties>

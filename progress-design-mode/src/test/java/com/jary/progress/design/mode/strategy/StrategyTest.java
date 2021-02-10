@@ -37,9 +37,9 @@ public class StrategyTest {
      * 策略与简单工厂结合，降低耦合
      */
     @Test
-    public void testStrategySimpleFactory(){
+    public void testStrategySimpleFactory() {
         CashContextV2 context = new CashContextV2("打8折");
-        System.out.println(context.getResult(100*5));
+        System.out.println(context.getResult(100 * 5));
     }
 
     /**

@@ -10,7 +10,7 @@ import java.util.concurrent.*;
 public class CompletableFutureDemo2 {
 
     public static void main(String[] args) {
-        ExecutorService executorService = new ThreadPoolExecutor(4,4,0, TimeUnit.MILLISECONDS, new LinkedBlockingQueue<>());
+        ExecutorService executorService = new ThreadPoolExecutor(4, 4, 0, TimeUnit.MILLISECONDS, new LinkedBlockingQueue<>());
         CompletableFuture<String> completableFuture = CompletableFuture.supplyAsync(() -> {
             try {
                 TimeUnit.MILLISECONDS.sleep(2000L);
@@ -25,19 +25,19 @@ public class CompletableFutureDemo2 {
 
         try {
             String result = completableFuture.get(2000L, TimeUnit.MILLISECONDS);
-            System.out.println("result = "+result);
+            System.out.println("result = " + result);
         } catch (ArithmeticException e) {
             //异常类型被转换, 待研究
             System.out.println("it is ArithmeticException error");
         } catch (Exception e) {
             //异常正常获取方法
             Throwable throwable = e.getCause();
-            if(throwable instanceof ArithmeticException) {
+            if (throwable instanceof ArithmeticException) {
                 System.out.println("it is ArithmeticException error ++");
                 throwable.printStackTrace();
             }
         }
 
-       // executorService.shutdown();
+        // executorService.shutdown();
     }
 }

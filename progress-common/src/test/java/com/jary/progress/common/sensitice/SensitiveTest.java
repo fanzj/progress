@@ -14,7 +14,7 @@ public class SensitiveTest {
     private UserDO userDO;
 
     @Before
-    public void setUp(){
+    public void setUp() {
         userDO = new UserDO();
         userDO.setId(1);
         userDO.setName("王三无");

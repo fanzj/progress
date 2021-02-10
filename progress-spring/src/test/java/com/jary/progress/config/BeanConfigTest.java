@@ -16,7 +16,7 @@ public class BeanConfigTest {
     private AnnotationConfigApplicationContext ctx;
 
     @Before
-    public void setUp(){
+    public void setUp() {
         ctx = new AnnotationConfigApplicationContext();
         ctx.register(BeanConfig.class);
         ctx.refresh();
@@ -26,7 +26,7 @@ public class BeanConfigTest {
      * 基于注解
      */
     @Test
-    public void testPerson(){
+    public void testPerson() {
         Person person = (Person) ctx.getBean("person");
         person.sayWord("hello");
         System.out.println(person);

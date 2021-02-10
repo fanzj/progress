@@ -14,14 +14,14 @@ import javax.annotation.Resource;
  * @date 2020/5/26 3:56 下午
  */
 @RunWith(SpringJUnit4ClassRunner.class)
-@ContextConfiguration(locations = { "classpath*:spring-aop.xml" })
+@ContextConfiguration(locations = {"classpath*:spring-aop.xml"})
 public class UserServiceImplTest {
 
     @Autowired
     private UserService us;
 
     @Test
-    public void fun1(){
+    public void fun1() {
         us.save();
     }
 }

@@ -9,6 +9,7 @@ public class CashNormal extends CashSuper {
 
     /**
      * 原价返回
+     *
      * @param money 原价
      * @return
      */

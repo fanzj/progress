@@ -14,16 +14,16 @@ public class BeanPostProcessorService implements BeanPostProcessor {
 
     @Override
     public Object postProcessBeforeInitialization(Object bean, String beanName) throws BeansException {
-        if(bean instanceof Person) {
-            System.out.println("postProcessBeforeInitialization... beanName="+beanName+", bean="+bean);
+        if (bean instanceof Person) {
+            System.out.println("postProcessBeforeInitialization... beanName=" + beanName + ", bean=" + bean);
         }
         return bean;
     }
 
     @Override
     public Object postProcessAfterInitialization(Object bean, String beanName) throws BeansException {
-        if(Person.class.isAssignableFrom(bean.getClass())) {
-            System.out.println("postProcessAfterInitialization... beanName="+beanName+", bean="+bean);
+        if (Person.class.isAssignableFrom(bean.getClass())) {
+            System.out.println("postProcessAfterInitialization... beanName=" + beanName + ", bean=" + bean);
         }
         return bean;
     }

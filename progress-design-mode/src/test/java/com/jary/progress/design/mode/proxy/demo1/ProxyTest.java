@@ -9,7 +9,7 @@ import org.junit.Test;
 public class ProxyTest {
 
     @Test
-    public void testProxy(){
+    public void testProxy() {
         Proxy proxy = new Proxy(new Pursuit(new SchoolGirl("小美")));
         proxy.giveChocolate();
         proxy.giveDolls();

@@ -11,7 +11,7 @@ public class FutureDemo2 {
 
     public static void main(String[] args) {
         long start = System.currentTimeMillis();
-        ExecutorService executorService = new ThreadPoolExecutor(5,5,0, TimeUnit.MILLISECONDS, new LinkedBlockingQueue<>());
+        ExecutorService executorService = new ThreadPoolExecutor(5, 5, 0, TimeUnit.MILLISECONDS, new LinkedBlockingQueue<>());
         Future<String> future = executorService.submit(() -> {
             System.out.println("开始执行子线程的call方法");
             try {
@@ -29,10 +29,10 @@ public class FutureDemo2 {
         }
 
         System.out.println("main主线程开始执行任务");
-        try{
+        try {
             System.out.println("执行完子线程后返回的结果是：" + future.get());
             long end = System.currentTimeMillis();
-            System.out.println(MessageFormat.format("耗时：{0}s", (end - start)/1000.0));
+            System.out.println(MessageFormat.format("耗时：{0}s", (end - start) / 1000.0));
         } catch (InterruptedException e) {
             e.printStackTrace();
         } catch (ExecutionException e) {

@@ -9,7 +9,7 @@ import org.junit.Test;
 public class TemplateTest {
 
     @Test
-    public void test(){
+    public void test() {
         AbstractClass c = new ConcreteClassA();
         c.templateMethod();
 

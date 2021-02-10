@@ -13,14 +13,14 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
  * 单元测试方法二：整合junit和spring-test
  */
 @RunWith(SpringJUnit4ClassRunner.class)
-@ContextConfiguration(locations = { "classpath*:spring-beans.xml" })
+@ContextConfiguration(locations = {"classpath*:spring-beans.xml"})
 public class BeanConfigTest2 {
 
     @Autowired
     private Person person;
 
     @Test
-    public void test(){
+    public void test() {
         person.sayWord("hello");
     }
 }

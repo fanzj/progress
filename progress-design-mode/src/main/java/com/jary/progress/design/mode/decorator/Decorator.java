@@ -5,7 +5,7 @@ package com.jary.progress.design.mode.decorator;
  * @date 2020/5/15 11:20 下午
  * 装饰类
  */
-public abstract class Decorator extends Component{
+public abstract class Decorator extends Component {
 
     protected Component component;//聚合
 
@@ -15,7 +15,7 @@ public abstract class Decorator extends Component{
 
     @Override
     public void operation() {
-        if(component != null) {
+        if (component != null) {
             component.operation();
         }
     }

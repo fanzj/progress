@@ -15,9 +15,10 @@ public class FutureDemo1 {
 
     /**
      * 最简单的并行计算，任务开始submit()，等待返回get()。
-     *  一个Future表示一个异步计算结果。Future接口里提供多个方法，判断任务是否可取消，任务执行结果，等待执行结果等。
-     *  V get()：获取异步结果，如果没结果可用，会一直阻塞到计算完成返回。
-     *  V get(long timeout, TimeUnit unit)：有时间限制的阻塞，直到timeout时间结束还未计算完成，抛出异常。
+     * 一个Future表示一个异步计算结果。Future接口里提供多个方法，判断任务是否可取消，任务执行结果，等待执行结果等。
+     * V get()：获取异步结果，如果没结果可用，会一直阻塞到计算完成返回。
+     * V get(long timeout, TimeUnit unit)：有时间限制的阻塞，直到timeout时间结束还未计算完成，抛出异常。
+     *
      * @param args
      */
     public static void main(String[] args) {
@@ -51,7 +52,7 @@ public class FutureDemo1 {
         futureList.forEach(f -> {
             try {
                 String result = f.get();
-               System.out.println("线程执行结果：" + result);
+                System.out.println("线程执行结果：" + result);
             } catch (Exception e) {
                 e.printStackTrace();
             }

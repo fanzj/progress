@@ -7,11 +7,10 @@ package com.jary.progress.design.mode.strategy;
 public enum CashTypeEnum {
     NORMAL("正常收费", "com.jary.progress.design.mode.strategy.CashNormal"),
     RETURN("满300返100", "com.jary.progress.design.mode.strategy.CashReturn"),
-    REBATE("打8折", "com.jary.progress.design.mode.strategy.CashRebate")
-    ;
+    REBATE("打8折", "com.jary.progress.design.mode.strategy.CashRebate");
 
 
-    private CashTypeEnum(String type, String clazz){
+    private CashTypeEnum(String type, String clazz) {
         this.type = type;
         this.clazz = clazz;
     }
@@ -19,9 +18,9 @@ public enum CashTypeEnum {
     private String type;
     private String clazz;
 
-    public static CashTypeEnum getBy(String type){
-        for(CashTypeEnum cashTypeEnum : CashTypeEnum.values()) {
-            if(cashTypeEnum.getType().equals(type)) {
+    public static CashTypeEnum getBy(String type) {
+        for (CashTypeEnum cashTypeEnum : CashTypeEnum.values()) {
+            if (cashTypeEnum.getType().equals(type)) {
                 return cashTypeEnum;
             }
         }

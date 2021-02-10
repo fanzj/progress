@@ -8,7 +8,7 @@ public class Pursuit implements GiveGift {
 
     private SchoolGirl mm;
 
-    public Pursuit(SchoolGirl mm){
+    public Pursuit(SchoolGirl mm) {
         this.mm = mm;
     }
 
